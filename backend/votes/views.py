@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Person, Bill
+from .serializers import PersonSerializer, BillSerializer
 
-# Create your views here.
+class PersonViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
+
+class BillViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Bill.objects.all()
+    serializer_class = BillSerializer

@@ -1,0 +1,142 @@
+div.form-box {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.form {
+  overflow: hidden;
+  max-width: 500px;
+  width: 500px;
+  margin: 50px auto;
+  background:#c4c4c4;
+  -webkit-box-shadow: 0px 0px 96px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 96px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 96px 0px rgba(0,0,0,0.75);  
+  padding: 40px;
+  color: #282c34;
+}
+
+.form-min-height {
+  min-height: 250px;
+}
+
+.form input {
+  width: 100%;
+  height: 28px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.form-lg {
+  width: auto;
+  max-width: 100%;
+  font-size: 18px;
+  text-align: left;
+}
+
+.numbers {
+  height: 150px;
+  overflow: auto;
+}
+
+.btn-primary-block {
+  display: block;
+  width: 200px;
+  height: 80px;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  background-color: #343a40;
+  border: 1px solid #343a40;
+  border-radius: 0.25rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.btn-primary-block:hover {
+  background-color: #1f2327;
+  border-color: #1f2327;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.margin-0 a {
+  color: #fff;
+}
+
+
+.container {
+  margin-top: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table-responsive {
+  margin-top: 10px;
+}
+
+.table th, .table td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table th {
+  background-color: #343a40;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+}
+
+.table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+}

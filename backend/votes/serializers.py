@@ -36,10 +36,11 @@ class PersonSerializer(serializers.ModelSerializer):
 class BillSerializer(serializers.ModelSerializer):
     supporters = serializers.SerializerMethodField()
     opposers = serializers.SerializerMethodField()
+    primary_sponsor_name = serializers.CharField(source='primary_sponsor.name', read_only=True)
 
     class Meta:
         model = Bill
-        fields = ['id', 'title', 'supporters', 'opposers']
+        fields = ['id', 'title', 'supporters', 'opposers', 'primary_sponsor_name']
 
     def get_supporters(self, obj):
         supported_vote_results = VoteResult.objects.filter(vote__bill=obj, vote_type=VoteResult.YES)

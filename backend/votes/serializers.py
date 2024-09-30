@@ -16,13 +16,13 @@ class SupportingPersonSerializer(serializers.ModelSerializer):
 
 class PersonSerializer(serializers.ModelSerializer):
     supported_bills = serializers.SerializerMethodField()
-    opposed_bills = serializers.SerializerMethodField()  # Corrected here
+    opposed_bills = serializers.SerializerMethodField()
 
     class Meta:
         model = Person
         fields = ['id', 'name', 'supported_bills', 'opposed_bills']
 
-    def get_supported_bills(self, obj):  # Also corrected typo in method name
+    def get_supported_bills(self, obj):
         supported_vote_results = VoteResult.objects.filter(legislator=obj, vote_type=VoteResult.YES)
         bills = [result.vote.bill for result in supported_vote_results]
         return SupportedBillSerializer(bills, many=True).data
